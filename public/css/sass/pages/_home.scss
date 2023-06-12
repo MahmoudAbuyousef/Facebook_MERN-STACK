@@ -1,0 +1,510 @@
+@use "../helpers/variables" as *;
+@use "../helpers/placeholder" as *;
+body {
+  background-color: $background_color;
+  color: #fff;
+}
+
+span {
+  margin-right: 5px;
+}
+
+.profile-photo {
+  @extend %radius;
+  margin-right: 10px;
+}
+.profile-friend-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.group-photo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.home__container {
+  @extend %flex;
+  .home__sidebar--left {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    padding: 10px;
+    width: fit-content;
+    overflow-y: auto;
+    height: 90vh;
+    .home__sidebar-links {
+      li:empty {
+        border-bottom: 1px solid $hr_color;
+      }
+      li {
+        padding: 10px 5px;
+        &:hover {
+          background-color: $background_popup;
+          border-radius: 10px;
+        }
+        a {
+          font-size: 0.9rem;
+          @extend %alignCenter;
+          color: #fff;
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .home__sidebar-group {
+      h2 {
+        color: $nav_color;
+        font-size: 1rem;
+        margin-top: 15px;
+      }
+      li {
+        padding: 10px 0;
+        a {
+          color: #fff;
+          @extend %alignCenter;
+        }
+      }
+    }
+  }
+  .home__content {
+    padding-top: 120px;
+    .home__stories {
+      max-width: 90%;
+      margin: auto;
+      background-color: $dark_color;
+      border-radius: 10px;
+      .home__stories-btns {
+        @extend %flex;
+        padding: 0 10px;
+        border-bottom: 1px solid $hr_color;
+        button {
+          width: 45%;
+          padding: 10px;
+          color: $nav_color;
+          i {
+            margin-right: 5px;
+            font-size: 1rem;
+          }
+        }
+        .home__stories-btns-active {
+          i {
+            color: $main_color;
+          }
+        }
+      }
+      .home__stories-show {
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 5px;
+        @extend %alignCenter;
+        .add__stories {
+          background-color: $background_color;
+          border-radius: 10px;
+          .profile__img-story {
+            position: relative;
+            border-radius: 10px;
+            height: 190px;
+            padding-bottom: 20px;
+            .story-btn {
+              position: absolute;
+              bottom: 10px;
+              i {
+                margin: auto;
+              }
+            }
+            img {
+              width: 90px;
+              height: 140px;
+              border-radius: 10px;
+            }
+          }
+          a {
+            padding: 10px;
+            color: $nav_color;
+            @extend %alignCenter;
+            flex-direction: column;
+            i {
+              margin-bottom: 10px;
+              @extend %flexCenter;
+              @extend %radius;
+              color: #fff;
+              background-color: $main_color;
+            }
+          }
+        }
+        .another__stories {
+          @extend %flex;
+          margin-left: 10px;
+          max-width: 90vw;
+          height: 180px;
+          a {
+            min-width: 100px;
+            height: 100%;
+            position: relative;
+            margin: 0 5px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: $main_color;
+            color: #fff;
+            font-size: 12px;
+            .friends__stories {
+              .profile-friends {
+                img {
+                  @extend %radius;
+                  border: 2px solid red;
+                }
+              }
+              .friend__name {
+                font-size: 10px;
+                position: absolute;
+                bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .home__added-post {
+      width: 90%;
+      margin: auto;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 8px;
+      background-color: $dark_color;
+      .container__post {
+        @extend %flex;
+        border-bottom: 1px solid $hr_color;
+        .pofile_photo {
+          margin-bottom: 5px;
+          a {
+            margin-right: 10px;
+          }
+        }
+        .write__post {
+          position: relative;
+          background-color: $background_popup;
+          border-radius: 20px;
+          padding: 10px;
+          margin-bottom: 5px;
+          width: 100%;
+          .write__post-buttons {
+            width: 100%;
+            text-align: left;
+            color: #fff;
+            color: $nav_color;
+            font-size: 1rem;
+          }
+        }
+        .write__post-popup {
+          display: none;
+          color: #fff;
+          @extend %fixed;
+          background-color: rgba($color: #000000, $alpha: 0.5);
+          .create__post {
+            @extend %positionRelative;
+            .top__post {
+              @extend %flex;
+              padding: 10px;
+              text-align: center;
+              border-bottom: 1px solid $hr_color;
+              h2 {
+                font-size: 1rem;
+              }
+              .close__create-post {
+                @extend %radius;
+                @extend %flexCenter;
+                background-color: $background_search_input;
+                cursor: pointer;
+                i {
+                  color: $nav_color;
+                }
+              }
+            }
+            .post__user-info {
+              padding: 10px;
+              @extend %alignCenter;
+            }
+            .post__content {
+              padding: 10px;
+              input {
+                width: 100%;
+                height: 30px;
+                color: #fff;
+              }
+            }
+            .create__pots-btn {
+              background-color: $main_color;
+              width: 90%;
+              padding: 10px;
+              border-radius: 8px;
+              display: block;
+              margin: auto;
+              color: #fff;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .post__options {
+        @extend %flex;
+        padding: 5px;
+        margin-top: 5px;
+        button {
+          color: #fff;
+          font-size: 12px;
+          display: block;
+          i {
+            margin-right: 5px;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            display: block;
+          }
+          a {
+            color: #fff;
+            display: block;
+          }
+        }
+        .video-icon {
+          color: #f5264c;
+        }
+        .photo-icon {
+          color: #41be60;
+        }
+        .smile-icon {
+          color: #fabc33;
+        }
+      }
+    }
+    .posts {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      .post-added {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: $dark_color;
+        border-radius: 10px;
+        .post {
+          .profile-photo-post {
+            @extend %flex;
+            .user__info {
+              @extend %alignCenter;
+            }
+            h2 {
+              font-size: 0.7rem;
+            }
+            .hide__post {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              @extend %flexCenter;
+              background-color: $background_popup;
+              cursor: pointer;
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+        .content__post-add {
+          padding: 10px;
+          margin-top: 20px;
+        }
+        .post-interactive {
+          padding: 10px;
+          .post__result {
+            border-bottom: 1px solid $hr_color;
+          }
+          .post__btns-interactive {
+            margin-top: 5px;
+            @extend %flex;
+            button {
+              padding: 10px;
+              border-radius: 10px;
+              color: $nav_color;
+              &:hover {
+                background-color: $background_popup;
+              }
+            }
+            .like:hover {
+              color: $main_color;
+            }
+          }
+          .comments {
+            // display: none;
+            @extend %alignCenter;
+            margin-top: 5px;
+            border-top: 1px solid $hr_color;
+            padding: 10px 0;
+            .write__comment {
+              background-color: $background_search_input;
+              padding: 10px;
+              border-radius: 20px;
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home__sidebar--right {
+    display: none;
+    position: fixed;
+    right: 0;
+    width: 20%;
+    height: 90vh;
+    padding: 20px;
+    overflow-x: auto;
+    .home__sidebar-right-nav {
+      @extend %flex;
+      .heading {
+        margin-right: 20px;
+        h2 {
+          color: $nav_color;
+          font-size: 1rem;
+        }
+      }
+      .home__nav-btns {
+        @extend %flex;
+        button {
+          margin-right: 20px;
+          i {
+            font-size: 1rem;
+            color: $nav_color;
+          }
+        }
+      }
+    }
+    .home__sidebar--right-list {
+      padding: 20px 0;
+      li:empty {
+        border: 1px solid $hr_color;
+      }
+      li {
+        margin: 15px 0;
+        a {
+          color: $nav_color;
+          @extend %alignCenter;
+        }
+      }
+    }
+    .home__sidebar-group {
+      h2 {
+        color: $nav_color;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media (min-width: 576px) {
+  %aligncenterlarg {
+    display: flex;
+    align-items: center;
+  }
+  %radiuslarg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  %flexlarg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .home__container {
+    .home__content {
+      padding-top: 70px;
+      width: 90%;
+      margin: auto;
+      .home__stories {
+        .home__stories-show {
+          .another__stories {
+            max-width: 80%;
+          }
+        }
+      }
+      .home__added-post {
+        .container__post {
+          .write__post-popup {
+            .create__post {
+              width: 70%;
+            }
+          }
+        }
+        .post__options {
+          button {
+            font-size: 12px;
+            @extend %aligncenterlarg;
+            i {
+              margin-bottom: 0;
+            }
+            a {
+              @extend %aligncenterlarg;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 767px) {
+  .home__container {
+    .home__sidebar--left {
+      display: block;
+      width: fit-content;
+      letter-spacing: 1px;
+    }
+    .home__content {
+      position: relative;
+      left: 100px;
+      width: 60%;
+      margin: auto;
+      .home__added-post {
+        .container__post {
+          .write__post-popup {
+            .create__post {
+              width: 50%;
+              margin-left: 35%;
+            }
+          }
+        }
+        .post__options {
+          button {
+            font-size: 12px;
+            i {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 991px) {
+  .home__container {
+    .home__sidebar--right {
+      top: 60px;
+      display: block;
+      width: fit-content;
+    }
+    .home__content {
+      width: 45%;
+      position: static;
+      .home__added-post {
+        .container__post {
+          .write__post-popup {
+            .create__post {
+              width: 40%;
+              margin-left: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

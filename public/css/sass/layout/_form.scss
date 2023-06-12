@@ -1,0 +1,137 @@
+@use "../helpers/variables" as *;
+@use "../components/buttons" as *;
+@use "../components/inputs" as *;
+.facebook__form__container {
+	margin-top: 40px;
+	.facebook__form {
+		.form {
+			margin-left: 40px;
+			width: 80%;
+			background-color: #fff;
+			padding: 15px;
+			border-radius: 7px;
+			box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+			input {
+				display: block;
+				width: 100%;
+				border: 1px solid $border_color;
+				padding: 13px;
+				border-radius: 5px;
+				margin-bottom: 15px;
+				&:focus {
+					border: 1px solid $border_alt_color;
+				}
+			}
+			.password__forgotten {
+				text-align: center;
+				padding: 15px;
+				border-bottom: 1px solid $border_color;
+				margin-bottom: 10px;
+			}
+			.create__account {
+				text-align: center;
+				padding: 10px 0;
+				.create__account--btn {
+					background-color: $btn_success;
+					color: #fff;
+					font-weight: bold;
+					padding: 15px;
+					border-radius: 5px;
+				}
+			}
+		}
+		.create__page {
+			margin-left: 40px;
+			padding: 30px;
+			.create__page--link {
+				color: #000000;
+				font-weight: bold;
+			}
+		}
+	}
+}
+@media (max-width: 576px) {
+	.facebook__form__container {
+		margin: 0px;
+		.facebook__form {
+			.form {
+				margin: 0;
+				width: 100%;
+			}
+			.create__page {
+				margin: 0;
+				padding: 10px;
+			}
+		}
+	}
+}
+.signup__form {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	.ovarlay__signup {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		background-color: rgba($color: #fff, $alpha: 0.7);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.form {
+			width: 460px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+			background-color: #fff;
+			.heading {
+				display: flex;
+				justify-content: space-between;
+				padding: 10px;
+				border-bottom: 1px solid $border_color;
+				.heading__form {
+					h2 {
+						font-weight: bold;
+					}
+					p {
+						color: $text_color;
+					}
+				}
+				.x__mark {
+					cursor: pointer;
+				}
+			}
+			.form__container {
+				padding: 15px;
+				.form__help {
+					font-size: 0.7rem;
+					padding: 7px;
+					margin: 5px 0;
+				}
+				.signup {
+					text-align: center;
+					.btn__signup {
+						width: 200px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.signup__form {
+		.ovarlay__signup {
+			display: block;
+			.form {
+				width: 100%;
+				border-radius: 0;
+				box-shadow: none;
+			}
+		}
+	}
+}

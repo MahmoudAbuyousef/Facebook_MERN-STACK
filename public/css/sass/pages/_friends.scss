@@ -1,0 +1,5 @@
+@use "../helpers/variables" as *;
+@use "../layout/navigation";
+body {
+  background-color: $background_color;
+}

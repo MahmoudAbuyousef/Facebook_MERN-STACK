@@ -1,0 +1,298 @@
+input {
+  background-color: transparent;
+}
+
+.form__input {
+  padding: 7px;
+  background-color: #f5f6f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.form__input:focus {
+  border: 1px solid #496b99;
+}
+
+.select__fields {
+  display: flex;
+  justify-content: space-between;
+}
+.select__fields .select__field {
+  border: 1px solid #e0e0e0;
+  padding: 0px 6px;
+  border-radius: 5px;
+  width: 33.3333333333%;
+  margin: 10px 5px;
+}
+.select__fields .select__field select {
+  padding: 7px;
+  width: 100%;
+}
+
+.radio__fields {
+  display: flex;
+}
+.radio__fields .radio__field {
+  padding: 5px 7px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  width: 33.3333333333%;
+  margin: 0 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.big__label {
+  color: #7e7a79;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .form__input {
+    width: 100%;
+  }
+  .select__fields .select__field {
+    padding: 0px 2px;
+  }
+  .radio__fields .radio__field {
+    padding: 5px 3px;
+    margin: 0 1px;
+  }
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn__signup {
+  color: #fff;
+  font-weight: bold;
+  background-color: #42b631;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.btn__primary {
+  background-color: #1977f1;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn__gray {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e5e6eb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+:root ::-webkit-scrollbar {
+  width: 5px;
+}
+:root ::-webkit-scrollbar-thumb {
+  background-color: #a6a7a9;
+  border-radius: 10px;
+}
+
+.facebook__form__container {
+  margin-top: 40px;
+}
+.facebook__form__container .facebook__form .form {
+  margin-left: 40px;
+  width: 80%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.facebook__form__container .facebook__form .form input {
+  display: block;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  padding: 13px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.facebook__form__container .facebook__form .form input:focus {
+  border: 1px solid #496b99;
+}
+.facebook__form__container .facebook__form .form .password__forgotten {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+.facebook__form__container .facebook__form .form .create__account {
+  text-align: center;
+  padding: 10px 0;
+}
+.facebook__form__container .facebook__form .form .create__account .create__account--btn {
+  background-color: #42b631;
+  color: #fff;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+}
+.facebook__form__container .facebook__form .create__page {
+  margin-left: 40px;
+  padding: 30px;
+}
+.facebook__form__container .facebook__form .create__page .create__page--link {
+  color: #000000;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .facebook__form__container {
+    margin: 0px;
+  }
+  .facebook__form__container .facebook__form .form {
+    margin: 0;
+    width: 100%;
+  }
+  .facebook__form__container .facebook__form .create__page {
+    margin: 0;
+    padding: 10px;
+  }
+}
+.signup__form {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.signup__form .ovarlay__signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signup__form .ovarlay__signup .form {
+  width: 460px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.signup__form .ovarlay__signup .form .heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.signup__form .ovarlay__signup .form .heading .heading__form h2 {
+  font-weight: bold;
+}
+.signup__form .ovarlay__signup .form .heading .heading__form p {
+  color: #7e7a79;
+}
+.signup__form .ovarlay__signup .form .heading .x__mark {
+  cursor: pointer;
+}
+.signup__form .ovarlay__signup .form .form__container {
+  padding: 15px;
+}
+.signup__form .ovarlay__signup .form .form__container .form__help {
+  font-size: 0.7rem;
+  padding: 7px;
+  margin: 5px 0;
+}
+.signup__form .ovarlay__signup .form .form__container .signup {
+  text-align: center;
+}
+.signup__form .ovarlay__signup .form .form__container .signup .btn__signup {
+  width: 200px;
+}
+
+@media (max-width: 576px) {
+  .signup__form .ovarlay__signup {
+    display: block;
+  }
+  .signup__form .ovarlay__signup .form {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+.container .row.row__facebook {
+  padding-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.container .row.row__facebook .col.facebook__info {
+  padding-left: 80px;
+}
+.container .row.row__facebook .col.facebook__info .facebook__login h1 {
+  color: #1977f1;
+  font-weight: bold;
+  font-size: 3.5rem;
+}
+.container .row.row__facebook .col.facebook__info .facebook__login h2 {
+  font-size: 28px;
+}
+
+@media (max-width: 576px) {
+  .container .row.row__facebook {
+    padding-top: 10px;
+    display: block;
+    text-align: center;
+  }
+  .container .row.row__facebook .col.facebook__info {
+    padding: 10px;
+  }
+  .container .row.row__facebook .col.facebook__info .facebook__login h1 {
+    font-size: 2.5rem;
+  }
+  .container .row.row__facebook .col.facebook__info .facebook__login h2 {
+    display: none;
+  }
+}
+@media (min-width: 577px) and (max-width: 991px) {
+  .container .row.row__facebook {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .container .row.row__facebook .col.facebook__info {
+    padding-left: 0px;
+  }
+  .container .row.row__facebook .col.facebook__info .facebook__login h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .container .row.row__facebook .col.facebook__info .facebook__login h2 {
+    display: none;
+  }
+}

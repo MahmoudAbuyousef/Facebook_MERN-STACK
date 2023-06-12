@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Facebook" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook.com - log in or sign up</title>
+    <link rel="stylesheet" href="/css/libs/all.min.css" />
+    <link rel="stylesheet" href="/css/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="/images/icons/facebook.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row row__facebook">
+        <div class="col facebook__info">
+          <div class="facebook__login">
+            <h1>facebook</h1>
+            <h2>Facebook helps you connect and share with the people in your life.</h2>
+          </div>
+        </div>
+        <div class="col facebook__form__container">
+          <div class="facebook__form">
+            <div class="form">
+              <form action="/login" method="POST">
+                <div class="email__input">
+                  <input type="text" name="emailorphone" placeholder="Email address or phone number" id="login-email-input" required />
+                </div>
+                <div class="password__input">
+                  <input type="password" name="password" placeholder="Password" id="login-password-input" required />
+                </div>
+                <div class="login__btn">
+                  <button class="btn__primary" id="btn-login">Log in</button>
+                </div>
+                <div class="password__forgotten">
+                  <a href="recoverypassword.ejs">Forgotten password?</a>
+                </div>
+                <div class="create__account">
+                  <button type="submit" class="create__account--btn" id="create-new-account">Create new account</button>
+                </div>
+              </form>
+            </div>
+            <div class="create__page">
+              <a href="#" class="create__page--link">Create a Page</a>
+              <span class="page__info">for a celebrity, brand or business.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="signup__form" id="signup-form">
+      <div class="ovarlay__signup">
+        <form action="/signup" method="POST">
+          <div class="form">
+            <div class="heading">
+              <div class="heading__form">
+                <h2>Sign Up</h2>
+                <p>It's quick and easy.</p>
+              </div>
+              <div class="x__mark">
+                <i class="fa-solid fa-xmark x__mark" id="close-signup"></i>
+              </div>
+            </div>
+            <div class="form__container">
+              <div class="username__input">
+                <input class="form__input" type="text" name="firstname" placeholder="First name" required id="signup-firstname" />
+                <input class="form__input" type="text" name="lastname" placeholder="Surname" required id="signup-lastname" />
+              </div>
+              <div class="mobile__input">
+                <input class="form__input w-100" type="text" name="emailorphone" placeholder="Mobile number or email address" required id="sign-mobile-or-email" />
+              </div>
+              <div class="password__input">
+                <input class="form__input w-100" type="password" name="password" placeholder="New Password" required id="signup-password" />
+              </div>
+              <div class="date__inputs">
+                <p class="big__label">Date of birth <i class="fa-solid fa-circle-question question__icon" id="question-icon"></i></p>
+                <div class="select__fields">
+                  <div class="select__field">
+                    <select id="select-day" name="day" required></select>
+                  </div>
+                  <div class="select__field">
+                    <select id="select-month" name="month" required>
+                      <option value="jan">Jan</option>
+                      <option value="feb">Feb</option>
+                      <option value="mar">Mar</option>
+                      <option value="apr">Apr</option>
+                      <option value="may">May</option>
+                      <option value="jun">Jun</option>
+                      <option value="jul">Jul</option>
+                      <option value="aug">Aug</option>
+                      <option value="sep">Sep</option>
+                      <option value="oct">Oct</option>
+                      <option value="nov">Nov</option>
+                      <option value="dec">Dec</option>
+                    </select>
+                  </div>
+                  <div class="select__field">
+                    <select id="select-year" name="year" required></select>
+                  </div>
+                </div>
+              </div>
+              <div class="gender__inputs">
+                <p class="big__label">Gender <i class="fa-solid fa-circle-question question__icon" id="question-icon"></i></p>
+                <div class="radio__fields">
+                  <div class="radio__field">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" />
+                  </div>
+                  <div class="radio__field">
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" />
+                  </div>
+                  <div class="radio__field">
+                    <label for="custom">Custom</label>
+                    <input type="radio" id="custom" name="gender" />
+                  </div>
+                </div>
+              </div>
+              <div class="form__help">
+                <p>People whso use our service may have uploaded your contact information to Facebook. <a href="#"> Learn more.</a></p>
+              </div>
+              <div class="form__help">
+                <p>By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</p>
+              </div>
+              <div class="signup">
+                <button type="submit" class="btn__signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/js/libs/bootstrap.bundle.min.js"></script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>
