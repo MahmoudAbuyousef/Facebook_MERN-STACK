@@ -1,5 +1,6 @@
-const users = require("../models/signupUsers");
-const post = require("../models/posts");
+const users = require("../models/SignupUsers");
+const post = require("../models/Posts");
+const comment = require("../models/Comment");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -39,13 +40,13 @@ module.exports = {
     try {
       const { username, password } = req.body;
       const loginUser = await users.findOne({ username });
-      console.log(loginUser);
-      loginUser && res.redirect("home.ejs");
-      res.render("home.ejs", { userInfo: loginUser });
+      if (loginUser) {
+        res.redirect("home.ejs");
+        console.log(loginUser);
+      }
 
       !loginUser && res.json({ message: "user already exists!" });
       const isPasswordValid = await bcrypt.compare(password, loginUser.password);
-      console.log(loginUser.password);
 
       !isPasswordValid && res.json({ message: "username or password is not correct" });
       const token = jwt.sign({ id: loginUser._id }, "mahmoud");
@@ -55,20 +56,17 @@ module.exports = {
       console.log(`threr was an error: ${error}`);
     }
   },
-  home: (req, res) => {
-    try {
-      res.render("home.ejs");
-    } catch (error) {
-      console.log(`there was an error: ${error}`);
-    }
-  },
-  profile: (req, res) => {
-    res.render("profile.ejs");
+  friends: (req, res) => {
+    res.render("friends.ejs");
   },
   index: async (req, res) => {
     try {
+      const userInfo = await users.findOne({});
       const showPosts = await post.find({});
-      res.render("home.ejs", { posts: showPosts });
+      const indexComments = await comment.find({});
+      if (userInfo) {
+        res.render("home.ejs", { userData: userInfo, posts: showPosts, showComments: indexComments });
+      }
     } catch (error) {
       console.log(`there was an error: ${error}`);
     }
@@ -81,6 +79,41 @@ module.exports = {
   deletepost: async (req, res) => {
     try {
       await post.deleteOne({ _id: req.params.id });
+      res.redirect("/home.ejs");
+    } catch (error) {
+      console.log(`there was an error: ${error}`);
+    }
+  },
+  addComment: (req, res) => {
+    const addComments = new comment({ commentBody: req.body.commentBody });
+    addComments.save().then(() => {
+      console.log("Add New Commnet");
+      res.redirect("home.ejs");
+    });
+  },
+  deleteComment: async (req, res) => {
+    try {
+      await comment.deleteOne({ _id: req.params.id });
+      res.redirect("/home.ejs");
+    } catch (error) {
+      console.log(`there was an error: ${error}`);
+    }
+  },
+  editComment: async (req, res) => {
+    try {
+      const id = req.params.id;
+      const updateComment = await comment.find({});
+      const showPosts = await post.find({});
+      const indexComments = await comment.find({});
+      res.render("EditComment.ejs", { comments: updateComment, posts: showPosts, idComment: id, showComments: indexComments });
+    } catch (error) {
+      console.log(`there was an error: ${error}`);
+    }
+  },
+  updateComment: async (req, res) => {
+    try {
+      const id = req.params.id;
+      await comment.findByIdAndUpdate(id, { commentBody: req.body.commentBody });
       res.redirect("/home.ejs");
     } catch (error) {
       console.log(`there was an error: ${error}`);

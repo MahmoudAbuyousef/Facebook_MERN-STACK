@@ -60,7 +60,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="friends.ejs">
+                      <a href="friends.html">
                         <img src=" /images/menu/friends.png" alt="" style="height: 36px; width: 36px" />
                         <div class="info">
                           <h3>Find friends</h3>
@@ -281,7 +281,7 @@
                         </div>
                       </div>
                     </div>
-                    <li><i class="fa-solid fa-book-open"></i><a href="story.ejs">Story</a></li>
+                    <li><i class="fa-solid fa-book-open"></i><a href="story.html">Story</a></li>
                     <li><i class="fa-solid fa-video"></i><a href="#">Rome</a></li>
                     <li></li>
                     <li><i class="fa-solid fa-flag"></i><a href="#">Page</a></li>
@@ -446,7 +446,7 @@
         </div>
         <div class="nav__page">
           <div class="nav__page-friends">
-            <a href="friends.ejs" aria-label="Facebook Friends Page"><i class="fa-solid fa-user-group"></i></a>
+            <a href="friends.html" aria-label="Facebook Friends Page"><i class="fa-solid fa-user-group"></i></a>
           </div>
         </div>
         <div class="nav__page">
@@ -849,7 +849,7 @@
                         </div>
                       </div>
                     </div>
-                    <li><i class="fa-solid fa-book-open"></i><a href="story.ejs">Story</a></li>
+                    <li><i class="fa-solid fa-book-open"></i><a href="story.html">Story</a></li>
                     <li><i class="fa-solid fa-video"></i><a href="#">Rome</a></li>
                     <li></li>
                     <li><i class="fa-solid fa-flag"></i><a href="#">Page</a></li>
@@ -1146,7 +1146,7 @@
             </a>
           </li>
           <li>
-            <a href="friends.ejs">
+            <a href="friends.html">
               <img src=" /images/menu/friends.png" alt="friends" />
               Find friedns
             </a>
@@ -1317,7 +1317,7 @@
           <div class="home__stories-show">
             <div class="add__stories">
               <div class="profile__img-story" id="add-story">
-                <a href="story.ejs">
+                <a href="story.html">
                   <img src=" /images/about.jpeg" alt="" />
                   <div class="story-btn">
                     <i class="fa-solid fa-plus"></i>
@@ -1425,27 +1425,37 @@
                   </div>
                 </div>
               </div>
-              <%if(showComments.length > 0) {%> <% showComments.forEach(comment => {%>
-              <div class="insert__commnet">
+              <div class="edit__comment">
+                <%if(showComments.length > 0) {%> <% showComments.forEach(comment => {%> <% if(comment._id == idComment) {%>
                 <div>
                   <a href="profile.html">
                     <img src="/images/about.jpeg" class="profile-photo" alt="" />
                   </a>
                 </div>
-                <div class="comment__content"><%=comment.commentBody%></div>
-                <div class="options" id="show-comment-options"><i class="fa-solid fa-ellipsis"></i></div>
-                <div class="comment__options" id="comment-option">
-                  <a class="btn__update" href="update/<%=comment._id%>"> Edit </a>
-                  <a class="btn__delete" href="/deleteComment/<%=comment._id%>?_method=delete"> Delete </a>
-                </div>
+                <form action="/update/<%=comment._id%>?_method=PUT" method="POST" class="edit__form">
+                  <div class="comment__content">
+                    <input type="text" value="<%=comment.commentBody%>" name="commentBody" />
+                  </div>
+                  <!-- Accept the Change -->
+                  <div class="btns">
+                    <button type="submit" class="btn btn-link">
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <!-- Cancle the Change -->
+                    <a class="cancle__edit" href="/home.ejs">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </a>
+                  </div>
+                </form>
               </div>
-              <%})%> <%}%>
+              <%}%> <%})%> <%}%>
             </div>
           </li>
           <%}) %>
         </ul>
         <%} %>
-        <ul class="posts" id="posts"></ul>
       </main>
       <!-- Sidebar Right -->
       <aside class="home__sidebar--right">

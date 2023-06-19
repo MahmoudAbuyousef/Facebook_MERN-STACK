@@ -1,63 +1,62 @@
 @use "../helpers/variables" as *;
 @use "../components/inputs" as *;
+body {
+  background-color: #fff;
+}
 .container {
-	.row.row__facebook {
-		padding-top: 100px;
-		align-items: center;
-		justify-content: center;
-		.col.facebook__info {
-			padding-left: 80px;
-			.facebook__login {
-				h1 {
-					color: $main_color;
-					font-weight: bold;
-					font-size: 3.5rem;
-				}
-				h2 {
-					font-size: 28px;
-				}
-			}
-		}
-	}
+  .row.row__facebook {
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+    .col.facebook__info {
+      padding-left: 80px;
+      .facebook__login {
+        h1 {
+          color: $main_color;
+          font-weight: bold;
+          font-size: 3.5rem;
+        }
+        h2 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 576px) {
-	.container {
-		.row.row__facebook {
-			padding-top: 10px;
-			display: block;
-			text-align: center;
-			.col.facebook__info {
-				padding: 10px;
-				.facebook__login {
-					h1 {
-						font-size: 2.5rem;
-					}
-					h2 {
-						display: none;
-					}
-				}
-			}
-		}
-	}
+  .container {
+    .row.row__facebook {
+      padding-top: 10px;
+      display: block;
+      text-align: center;
+      .col.facebook__info {
+        padding: 10px;
+        .facebook__login {
+          h1 {
+            font-size: 2.5rem;
+          }
+          h2 {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: 577px) and (max-width: 991px) {
-	.container {
-		.row.row__facebook {
-			flex-direction: column;
-			padding-top: 20px;
-			.col.facebook__info {
-				padding-left: 0px;
-				.facebook__login {
-					h1 {
-						text-align: center;
-						font-size: 2.5rem;
-					}
-					h2 {
-						display: none;
-					}
-				}
-			}
-		}
-	}
+  .container {
+    .row.row__facebook {
+      flex-direction: column;
+      padding-top: 20px;
+      .col.facebook__info {
+        padding-left: 0px;
+        .facebook__login {
+          h1 {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }

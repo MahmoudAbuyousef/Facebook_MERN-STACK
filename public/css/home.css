@@ -8,6 +8,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #18191b;
 }
 
 a {
@@ -43,7 +44,7 @@ p {
   justify-content: space-between;
 }
 
-.profile-photo, .home__container .home__content .home__stories .home__stories-show .add__stories a i, .home__container .home__content .home__stories .home__stories-show .another__stories a .friends__stories .profile-friends img, .home__container .home__content .home__added-post .container__post .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
+.profile-photo, .home__container .home__content .home__stories .home__stories-show .add__stories a i, .home__container .home__content .home__stories .home__stories-show .another__stories a .friends__stories .profile-friends img, .home__container .home__content .home__added-post .container__post .write__post-popup .create__post .top__post .close__create-post, .home__container .home__content .posts .post-added .post .profile-photo-post .hide__post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -68,9 +69,22 @@ p {
   padding-bottom: 10px;
 }
 
-.home__container .home__sidebar--left .home__sidebar-links li a, .home__container .home__sidebar--left .home__sidebar-group li a, .home__container .home__content .home__stories .home__stories-show, .home__container .home__content .home__stories .home__stories-show .add__stories a, .home__container .home__content .home__added-post .container__post .write__post-popup .create__post .post__user-info, .home__container .home__content .posts .post-added .post .profile-photo-post .user__info, .home__container .home__content .posts .post-added .post-interactive .comments, .home__container .home__sidebar--right .home__sidebar--right-list li a, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .post__user-info, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__pages .nav__page-notification .nav__page-notification-list ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__social .menu__search, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav .nav__messenger-icons, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification .nav__page-notification-list ul li a {
+.home__container .home__sidebar--left .home__sidebar-links li a, .home__container .home__sidebar--left .home__sidebar-group li a, .home__container .home__content .home__stories .home__stories-show, .home__container .home__content .home__stories .home__stories-show .add__stories a, .home__container .home__content .home__added-post .container__post .write__post-popup .create__post .post__user-info, .home__container .home__content .posts .post-added .post .profile-photo-post .user__info, .home__container .home__content .posts .post-added .post .insert__commnet, .home__container .home__content .posts .post-added .post .edit__comment, .home__container .home__content .posts .post-added .post .edit__comment .edit__form, .home__container .home__content .posts .post-added .post-interactive .comments, .home__container .home__content .posts .post-added .post-interactive .comments .write__comment form, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .post__user-info, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__pages .nav__page-notification .nav__page-notification-list ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__social .menu__search, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav .nav__messenger-icons, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification .nav__page-notification-list ul li a, .home__container .home__sidebar--right .home__sidebar--right-list li a {
   display: flex;
   align-items: center;
+}
+
+.home__container .home__sidebar--right .home__sidebar--right-list {
+  padding: 20px 0;
+}
+.home__container .home__sidebar--right .home__sidebar--right-list li:empty {
+  border: 1px solid #3f4042;
+}
+.home__container .home__sidebar--right .home__sidebar--right-list li {
+  margin: 15px 0;
+}
+.home__container .home__sidebar--right .home__sidebar--right-list li a {
+  color: #a6a7a9;
 }
 
 button {
@@ -219,7 +233,7 @@ input {
 
 .nav__contaienr {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   padding: 4px 15px;
   border-bottom: 1px solid #393939;
@@ -913,11 +927,6 @@ input {
 }
 body {
   background-color: #18191b;
-  color: #fff;
-}
-
-span {
-  margin-right: 5px;
 }
 
 .profile-photo {
@@ -978,7 +987,8 @@ span {
   color: #fff;
 }
 .home__container .home__content {
-  padding-top: 120px;
+  padding-top: 20px;
+  width: 100%;
 }
 .home__container .home__content .home__stories {
   max-width: 90%;
@@ -1093,7 +1103,7 @@ span {
   text-align: left;
   color: #fff;
   color: #a6a7a9;
-  font-size: 1rem;
+  font-size: 0.6rem;
 }
 .home__container .home__content .home__added-post .container__post .write__post-popup {
   display: none;
@@ -1175,22 +1185,93 @@ span {
   background-color: #242527;
   border-radius: 10px;
 }
+.home__container .home__content .posts .post-added .post .profile-photo-post {
+  color: #fff;
+}
 .home__container .home__content .posts .post-added .post .profile-photo-post h2 {
   font-size: 0.7rem;
 }
 .home__container .home__content .posts .post-added .post .profile-photo-post .hide__post {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
   background-color: #333436;
   cursor: pointer;
 }
-.home__container .home__content .posts .post-added .post .profile-photo-post .hide__post a {
+.home__container .home__content .posts .post-added .post .profile-photo-post .hide__post .post__icon-hidden {
+  color: #a6a7a9;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet {
+  position: relative;
+  margin-top: 10px;
   color: #fff;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet i {
+  margin-left: 5px;
+  font-size: 0.6rem;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__content {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  word-break: break-all;
+  background-color: #333436;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .options {
+  cursor: pointer;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options {
+  display: none;
+  position: absolute;
+  top: -60px;
+  background-color: #333436;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 40px;
+  border: 10px solid transparent;
+  border-bottom-color: #333436;
+  transform: rotate(-45deg);
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options a {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options a:hover {
+  border-radius: 5px;
+  background-color: #333436;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form {
+  border-radius: 30px;
+  background-color: #333436;
+  padding: 3px;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form input {
+  color: #fff;
+  background-color: #333436;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form .btns {
+  display: flex;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form .btns button {
+  color: #a6a7a9;
+  margin: 0 5px;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form .btns .cancle__edit {
+  color: #a6a7a9;
 }
 .home__container .home__content .posts .post-added .content__post-add {
   padding: 10px;
   margin-top: 20px;
+  color: #fff;
 }
 .home__container .home__content .posts .post-added .post-interactive {
   padding: 10px;
@@ -1223,6 +1304,13 @@ span {
   border-radius: 20px;
   width: 80%;
 }
+.home__container .home__content .posts .post-added .post-interactive .comments .write__comment form input {
+  width: 100%;
+  color: #fff;
+}
+.home__container .home__content .posts .post-added .post-interactive .comments .write__comment form button i {
+  color: #a6a7a9;
+}
 .home__container .home__sidebar--right {
   display: none;
   position: fixed;
@@ -1246,44 +1334,36 @@ span {
   font-size: 1rem;
   color: #a6a7a9;
 }
-.home__container .home__sidebar--right .home__sidebar--right-list {
-  padding: 20px 0;
-}
-.home__container .home__sidebar--right .home__sidebar--right-list li:empty {
-  border: 1px solid #3f4042;
-}
-.home__container .home__sidebar--right .home__sidebar--right-list li {
-  margin: 15px 0;
-}
-.home__container .home__sidebar--right .home__sidebar--right-list li a {
-  color: #a6a7a9;
-}
 .home__container .home__sidebar--right .home__sidebar-group h2 {
   color: #a6a7a9;
   font-size: 1rem;
 }
 
 @media (min-width: 576px) {
-  .home__container .home__content .home__added-post .post__options button a, .home__container .home__content .home__added-post .post__options button {
-    display: flex;
-    align-items: center;
-  }
   .home__container .home__content {
-    padding-top: 70px;
     width: 90%;
     margin: auto;
   }
   .home__container .home__content .home__stories .home__stories-show .another__stories {
     max-width: 80%;
   }
+  .home__container .home__content .home__added-post .container__post .write__post .write__post-buttons {
+    font-size: 1rem;
+  }
   .home__container .home__content .home__added-post .container__post .write__post-popup .create__post {
     width: 70%;
   }
   .home__container .home__content .home__added-post .post__options button {
     font-size: 12px;
+    display: flex;
+    align-items: center;
   }
   .home__container .home__content .home__added-post .post__options button i {
     margin-bottom: 0;
+  }
+  .home__container .home__content .home__added-post .post__options button a {
+    display: flex;
+    align-items: center;
   }
 }
 @media (min-width: 767px) {

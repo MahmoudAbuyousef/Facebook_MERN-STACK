@@ -3,12 +3,16 @@ const appController = require("../controllers/appController");
 
 router.get("/", appController.start);
 router.get("/home.ejs", appController.index);
-router.get("/profile.ejs", appController.profile);
+router.get("/friends.ejs", appController.friends);
+router.get("/update/:id", appController.editComment);
+router.put("/update/:id", appController.updateComment);
 
 router.post("/login", appController.login);
 router.post("/signup", appController.signup);
 router.post("/addpost", appController.addPost);
+router.post("/addComment", appController.addComment);
 
 router.delete("/delete/:id", appController.deletepost);
+router.delete("/deleteComment/:id", appController.deleteComment);
 
 module.exports = router;

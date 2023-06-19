@@ -1,3 +1,8 @@
+// * ============================== LOGIN FORM ===========================
+let btnLogin = document.getElementById("btn-login");
+btnLogin.onclick = function () {
+  window.location = "home.html";
+};
 // * ============================== SIGNUP FORM ==========================
 document.getElementById("create-new-account").onclick = function () {
   document.getElementById("signup-form").style.display = "block";
