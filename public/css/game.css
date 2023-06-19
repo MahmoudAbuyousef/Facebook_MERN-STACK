@@ -74,6 +74,29 @@ p {
   align-items: center;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.radius {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 button {
   cursor: pointer;
   background-color: transparent;

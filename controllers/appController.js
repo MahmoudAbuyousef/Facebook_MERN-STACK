@@ -1,6 +1,7 @@
 const users = require("../models/SignupUsers");
 const post = require("../models/Posts");
 const comment = require("../models/Comment");
+const story = require("../models/Story");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
@@ -11,6 +12,27 @@ module.exports = {
       console.log(`Start Facebook App`);
     } catch (error) {
       console.log(`there was an error: ${error}`);
+    }
+  },
+
+  login: async (req, res) => {
+    try {
+      const { username, password } = req.body;
+      const loginUser = await users.findOne({ username });
+      if (loginUser) {
+        res.redirect("home.ejs");
+        console.log(loginUser);
+      }
+
+      !loginUser && res.json({ message: "user already exists!" });
+      const isPasswordValid = await bcrypt.compare(password, loginUser.password);
+
+      !isPasswordValid && res.json({ message: "username or password is not correct" });
+      const token = jwt.sign({ id: loginUser._id }, "mahmoud");
+      res.json({ token, loginUserId: loginUser._id });
+      res.render("home.ejs");
+    } catch (error) {
+      console.log(`threr was an error: ${error}`);
     }
   },
   signup: async (req, res) => {
@@ -36,41 +58,44 @@ module.exports = {
       });
     }
   },
-  login: async (req, res) => {
-    try {
-      const { username, password } = req.body;
-      const loginUser = await users.findOne({ username });
-      if (loginUser) {
-        res.redirect("home.ejs");
-        console.log(loginUser);
-      }
 
-      !loginUser && res.json({ message: "user already exists!" });
-      const isPasswordValid = await bcrypt.compare(password, loginUser.password);
-
-      !isPasswordValid && res.json({ message: "username or password is not correct" });
-      const token = jwt.sign({ id: loginUser._id }, "mahmoud");
-      res.json({ token, loginUserId: loginUser._id });
-      res.render("home.ejs");
-    } catch (error) {
-      console.log(`threr was an error: ${error}`);
-    }
+  story: (req, res) => {
+    res.render("story.ejs");
   },
   friends: (req, res) => {
     res.render("friends.ejs");
   },
+  group: async (req, res) => {
+    const showPostsGroup = await post.find({});
+    const indexCommentsGroup = await comment.find({});
+    res.render("group.ejs", { posts: showPostsGroup, showComments: indexCommentsGroup });
+  },
+  game: (req, res) => {
+    res.render("game.ejs");
+  },
+
   index: async (req, res) => {
     try {
       const userInfo = await users.findOne({});
       const showPosts = await post.find({});
       const indexComments = await comment.find({});
+      const stories = await story.find({});
       if (userInfo) {
-        res.render("home.ejs", { userData: userInfo, posts: showPosts, showComments: indexComments });
+        res.render("home.ejs", { userData: userInfo, posts: showPosts, showComments: indexComments, stories: stories });
       }
     } catch (error) {
       console.log(`there was an error: ${error}`);
     }
   },
+
+  createStroy: (req, res) => {
+    const createStory = new story({ storyBody: req.body.storyBody });
+    createStory.save().then(() => {
+      console.log("Add New Story");
+      res.redirect("home.ejs");
+    });
+  },
+
   addPost: (req, res) => {
     const addPost = new post({ postBody: req.body.postBody });
     addPost.save().then(() => res.redirect("home.ejs"));
@@ -84,6 +109,7 @@ module.exports = {
       console.log(`there was an error: ${error}`);
     }
   },
+
   addComment: (req, res) => {
     const addComments = new comment({ commentBody: req.body.commentBody });
     addComments.save().then(() => {

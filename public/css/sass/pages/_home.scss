@@ -132,6 +132,13 @@ body {
             }
           }
         }
+        .carousel {
+          padding: 10px;
+          width: 100%;
+          .carousel-item {
+            width: fit-content;
+          }
+        }
         .another__stories {
           @extend %flex;
           margin-left: 10px;
@@ -139,6 +146,7 @@ body {
           height: 180px;
           a {
             min-width: 100px;
+            max-width: 100px;
             height: 100%;
             position: relative;
             margin: 0 5px;
@@ -153,6 +161,10 @@ body {
                   @extend %radius;
                   border: 2px solid red;
                 }
+              }
+              .story__content {
+                padding: 10px 0;
+                word-break: break-all;
               }
               .friend__name {
                 font-size: 10px;
@@ -385,8 +397,12 @@ body {
           color: #fff;
         }
         .post-interactive {
-          padding: 10px;
           .post__result {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: $nav_color;
             border-bottom: 1px solid $hr_color;
           }
           .post__btns-interactive {
@@ -396,11 +412,11 @@ body {
               padding: 10px;
               border-radius: 10px;
               color: $nav_color;
-              &:hover {
-                background-color: $background_popup;
-              }
             }
-            .like:hover {
+            .like-hidden {
+              display: none;
+            }
+            .like.active {
               color: $main_color;
             }
           }

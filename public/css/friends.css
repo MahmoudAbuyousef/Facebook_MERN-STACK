@@ -44,7 +44,7 @@ p {
   justify-content: space-between;
 }
 
-.profile-photo, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
+.home__container .home__content .friends-list ul li .friend .friend__profile .friend__profile-photo, .profile-photo, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -72,6 +72,29 @@ p {
 .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .post__user-info, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__pages .nav__page-notification .nav__page-notification-list ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__social .menu__search, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav .nav__messenger-icons, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification .nav__page-notification-list ul li a {
   display: flex;
   align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.radius {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 button {
@@ -175,7 +198,7 @@ input {
   justify-content: space-between;
 }
 
-.nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .profile-photo {
+.home__container .home__content .friends-list ul li .friend .friend__profile .friend__profile-photo, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .profile-photo {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -910,5 +933,183 @@ input {
     width: 30%;
     height: -moz-fit-content;
     height: fit-content;
+  }
+}
+.home__container .sidebar-left {
+  display: none;
+  position: sticky;
+  top: 50px;
+  left: 0;
+  background-color: #242527;
+  padding: 10px;
+  height: 100vh;
+  width: 50%;
+}
+.home__container .sidebar-left header {
+  color: #fff;
+}
+.home__container .sidebar-left header i {
+  background-color: #333436;
+}
+.home__container .sidebar-left .links {
+  margin-top: 10px;
+}
+.home__container .sidebar-left .links a {
+  padding: 10px;
+  color: #fff;
+  margin-top: 10px;
+}
+.home__container .sidebar-left .links a i {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #333436;
+}
+.home__container .sidebar-left .links a .active {
+  background-color: #1977f1;
+}
+.home__container .sidebar-left .links .active-home {
+  background-color: #333436;
+  border-radius: 10px;
+}
+.home__container .home__content {
+  padding: 10px;
+}
+.home__container .home__content header .search {
+  color: #fff;
+}
+.home__container .home__content header .search h1 {
+  font-size: 1.5rem;
+}
+.home__container .home__content header .links {
+  border-bottom: 1px solid #3f4042;
+  padding: 10px 0;
+}
+.home__container .home__content header .links a {
+  margin-right: 5px;
+  display: block;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #333436;
+}
+.home__container .home__content .friends-list h2 {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 1rem;
+}
+.home__container .home__content .friends-list ul li {
+  padding: 10px 0;
+}
+.home__container .home__content .friends-list ul li .friend {
+  display: flex;
+  align-items: center;
+}
+.home__container .home__content .friends-list ul li .friend .friend__profile .friend__profile-photo {
+  margin-right: 10px;
+}
+.home__container .home__content .friends-list ul li .friend .friend__requset .friend__info {
+  display: block;
+  color: #fff;
+}
+.home__container .home__content .friends-list ul li .friend .friend__requset .btns {
+  margin-top: 10px;
+}
+.home__container .home__content .friends-list ul li .friend .friend__requset .btns button {
+  width: 100px;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
+  margin: 5px 0;
+}
+.home__container .home__content .friends-list ul li .friend .friend__requset .btns .confirm {
+  background-color: #1977f1;
+}
+.home__container .home__content .friends-list ul li .friend .friend__requset .btns .delete {
+  background-color: #333436;
+}
+
+@media (min-width: 576px) {
+  .home__container {
+    display: flex;
+  }
+  .home__container .sidebar-left {
+    display: block;
+  }
+  .home__container .home__content {
+    width: 80%;
+  }
+}
+@media (min-width: 767px) {
+  .home__container .sidebar-left {
+    width: 40%;
+  }
+  .home__container .home__content header .search {
+    color: #fff;
+  }
+  .home__container .home__content header .search h1 {
+    font-size: 1.5rem;
+  }
+  .home__container .home__content header .links {
+    border-bottom: 1px solid #3f4042;
+    padding: 10px 0;
+  }
+  .home__container .home__content header .links a {
+    margin-right: 5px;
+    display: block;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #333436;
+  }
+  .home__container .home__content .friends-list ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .home__container .home__content .friends-list ul li .friend {
+    background-color: #242527;
+    display: block;
+    width: 200px;
+    border-radius: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__profile .friend__profile-photo {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset {
+    padding: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .friend__info {
+    display: block;
+    color: #fff;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns {
+    margin-top: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns button {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns .confirm {
+    background-color: #1977f1;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns .delete {
+    background-color: #333436;
+  }
+}
+@media (min-width: 991px) {
+  .home__container .sidebar-left {
+    width: 30%;
   }
 }

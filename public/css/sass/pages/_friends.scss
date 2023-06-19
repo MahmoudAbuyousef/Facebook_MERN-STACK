@@ -1,3 +1,210 @@
 @use "../helpers/variables" as *;
 @use "../layout/navigation";
 @use "../helpers/placeholder";
+
+.home__container {
+  .sidebar-left {
+    display: none;
+    position: sticky;
+    top: 50px;
+    left: 0;
+    background-color: $dark_color;
+    padding: 10px;
+    height: 100vh;
+    width: 50%;
+    header {
+      color: #fff;
+      i {
+        background-color: $background_popup;
+      }
+    }
+    .links {
+      margin-top: 10px;
+      a {
+        padding: 10px;
+        color: #fff;
+        margin-top: 10px;
+        i {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          margin-right: 5px;
+          background-color: $background_popup;
+        }
+        .active {
+          background-color: $main_color;
+        }
+      }
+      .active-home {
+        background-color: $background_popup;
+        border-radius: 10px;
+      }
+    }
+  }
+  .home__content {
+    padding: 10px;
+    header {
+      .search {
+        color: #fff;
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+      .links {
+        border-bottom: 1px solid $hr_color;
+        padding: 10px 0;
+        a {
+          margin-right: 5px;
+          display: block;
+          color: #fff;
+          font-size: 0.8rem;
+          padding: 8px;
+          border-radius: 20px;
+          background-color: $background_popup;
+        }
+      }
+    }
+    .friends-list {
+      h2 {
+        margin-top: 10px;
+        color: #fff;
+        font-size: 1rem;
+      }
+      ul {
+        li {
+          padding: 10px 0;
+          .friend {
+            display: flex;
+            align-items: center;
+            .friend__profile {
+              .friend__profile-photo {
+                margin-right: 10px;
+                @extend %radius;
+              }
+            }
+            .friend__requset {
+              .friend__info {
+                display: block;
+                color: #fff;
+              }
+              .btns {
+                margin-top: 10px;
+                button {
+                  width: 100px;
+                  padding: 8px;
+                  border-radius: 8px;
+                  color: #fff;
+                  margin: 5px 0;
+                }
+                .confirm {
+                  background-color: $main_color;
+                }
+                .delete {
+                  background-color: $background_popup;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .home__container {
+    display: flex;
+    .sidebar-left {
+      display: block;
+    }
+    .home__content {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .home__container {
+    .sidebar-left {
+      width: 40%;
+    }
+    .home__content {
+      header {
+        .search {
+          color: #fff;
+          h1 {
+            font-size: 1.5rem;
+          }
+        }
+        .links {
+          border-bottom: 1px solid $hr_color;
+          padding: 10px 0;
+          a {
+            margin-right: 5px;
+            display: block;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 8px;
+            border-radius: 20px;
+            background-color: $background_popup;
+          }
+        }
+      }
+      .friends-list {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          li {
+            .friend {
+              background-color: $dark_color;
+              display: block;
+              width: 200px;
+              border-radius: 10px;
+              .friend__profile {
+                .friend__profile-photo {
+                  margin: 0;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 0;
+                  border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                }
+              }
+              .friend__requset {
+                padding: 10px;
+                .friend__info {
+                  display: block;
+                  color: #fff;
+                }
+                .btns {
+                  margin-top: 10px;
+                  button {
+                    margin: 5px 0;
+                    padding: 8px;
+                    border-radius: 8px;
+                    color: #fff;
+                    width: 100%;
+                  }
+                  .confirm {
+                    background-color: $main_color;
+                  }
+                  .delete {
+                    background-color: $background_popup;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 991px) {
+  .home__container {
+    .sidebar-left {
+      width: 30%;
+    }
+  }
+}

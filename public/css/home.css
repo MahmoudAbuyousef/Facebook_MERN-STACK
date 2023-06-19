@@ -87,6 +87,29 @@ p {
   color: #a6a7a9;
 }
 
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.radius {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 button {
   cursor: pointer;
   background-color: transparent;
@@ -1049,6 +1072,14 @@ body {
   color: #fff;
   background-color: #1977f1;
 }
+.home__container .home__content .home__stories .home__stories-show .carousel {
+  padding: 10px;
+  width: 100%;
+}
+.home__container .home__content .home__stories .home__stories-show .carousel .carousel-item {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .home__container .home__content .home__stories .home__stories-show .another__stories {
   margin-left: 10px;
   max-width: 90vw;
@@ -1056,6 +1087,7 @@ body {
 }
 .home__container .home__content .home__stories .home__stories-show .another__stories a {
   min-width: 100px;
+  max-width: 100px;
   height: 100%;
   position: relative;
   margin: 0 5px;
@@ -1067,6 +1099,10 @@ body {
 }
 .home__container .home__content .home__stories .home__stories-show .another__stories a .friends__stories .profile-friends img {
   border: 2px solid red;
+}
+.home__container .home__content .home__stories .home__stories-show .another__stories a .friends__stories .story__content {
+  padding: 10px 0;
+  word-break: break-all;
 }
 .home__container .home__content .home__stories .home__stories-show .another__stories a .friends__stories .friend__name {
   font-size: 10px;
@@ -1273,10 +1309,12 @@ body {
   margin-top: 20px;
   color: #fff;
 }
-.home__container .home__content .posts .post-added .post-interactive {
-  padding: 10px;
-}
 .home__container .home__content .posts .post-added .post-interactive .post__result {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #a6a7a9;
   border-bottom: 1px solid #3f4042;
 }
 .home__container .home__content .posts .post-added .post-interactive .post__btns-interactive {
@@ -1287,10 +1325,10 @@ body {
   border-radius: 10px;
   color: #a6a7a9;
 }
-.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive button:hover {
-  background-color: #333436;
+.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive .like-hidden {
+  display: none;
 }
-.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive .like:hover {
+.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive .like.active {
   color: #1977f1;
 }
 .home__container .home__content .posts .post-added .post-interactive .comments {

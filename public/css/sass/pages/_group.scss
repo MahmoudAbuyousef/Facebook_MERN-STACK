@@ -1,4 +1,375 @@
 @use "../helpers/variables" as *;
-body {
-	background-color: $background_color;
+@use "../helpers/placeholder" as *;
+.home__container {
+  .sidebar-left {
+    margin-right: 20px;
+    display: none;
+    position: sticky;
+    top: 50px;
+    left: 0;
+    background-color: $dark_color;
+    padding: 10px;
+    height: 100vh;
+    width: 50%;
+    header {
+      color: #fff;
+      i {
+        background-color: $background_popup;
+      }
+    }
+    .links {
+      margin: 10px 0;
+      a {
+        padding: 10px;
+        color: #fff;
+        margin-top: 10px;
+        i {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          margin-right: 5px;
+          background-color: $background_popup;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .active {
+          background-color: $main_color;
+        }
+      }
+      .active-home {
+        background-color: $background_popup;
+        border-radius: 10px;
+      }
+      .create-group {
+        background-color: #273951;
+        width: 100%;
+        text-align: center;
+        color: $main_color;
+        display: block;
+      }
+    }
+    .group-list {
+      border-top: 1px solid $hr_color;
+      h2 {
+        padding: 10px 0;
+        color: #fff;
+        font-size: 1rem;
+      }
+      .list {
+        ul {
+          li {
+            padding: 10px 0;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home__content {
+    padding: 10px;
+    .posts {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+      .post-added {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: $dark_color;
+        border-radius: 10px;
+        .post {
+          .profile-photo-post {
+            @extend %flex;
+            color: #fff;
+            .user__info {
+              @extend %alignCenter;
+            }
+            h2 {
+              font-size: 0.7rem;
+            }
+            .hide__post {
+              @extend %radius;
+              @extend %flexCenter;
+              background-color: $background_popup;
+              cursor: pointer;
+              .post__icon-hidden {
+                color: $nav_color;
+              }
+            }
+          }
+          .insert__commnet {
+            position: relative;
+            margin-top: 10px;
+            @extend %alignCenter;
+            color: #fff;
+            i {
+              margin-left: 5px;
+              font-size: 0.6rem;
+            }
+            .comment__content {
+              width: fit-content;
+              padding: 10px;
+              border-radius: 20px;
+              word-break: break-all;
+              background-color: $background_popup;
+            }
+            .options {
+              cursor: pointer;
+            }
+            .comment__options {
+              display: none;
+              position: absolute;
+              top: -60px;
+              background-color: $background_popup;
+              padding: 5px;
+              border-radius: 10px;
+              width: 100%;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                right: 40px;
+                border: 10px solid transparent;
+                border-bottom-color: $background_popup;
+                transform: rotate(-45deg);
+              }
+              a {
+                display: block;
+                color: #fff;
+                margin-bottom: 5px;
+                padding: 5px;
+                &:hover {
+                  border-radius: 5px;
+                  background-color: $background_popup;
+                }
+              }
+            }
+          }
+          .edit__comment {
+            @extend %alignCenter;
+            .edit__form {
+              @extend %alignCenter;
+              border-radius: 30px;
+              background-color: $background_popup;
+              padding: 3px;
+              input {
+                color: #fff;
+                background-color: $background_popup;
+                padding: 10px;
+                border-radius: 20px;
+                width: 100%;
+              }
+              .btns {
+                display: flex;
+                button {
+                  color: $nav_color;
+                  margin: 0 5px;
+                }
+                .cancle__edit {
+                  color: $nav_color;
+                }
+              }
+            }
+          }
+        }
+        .content__post-add {
+          padding: 10px;
+          margin-top: 20px;
+          color: #fff;
+        }
+        .post-interactive {
+          .post__result {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: $nav_color;
+            border-bottom: 1px solid $hr_color;
+          }
+          .post__btns-interactive {
+            margin-top: 5px;
+            @extend %flex;
+            button {
+              padding: 10px;
+              border-radius: 10px;
+              color: $nav_color;
+            }
+            .like-hidden {
+              display: none;
+            }
+            .like.active {
+              color: $main_color;
+            }
+          }
+          .comments {
+            @extend %alignCenter;
+            margin-top: 5px;
+            border-top: 1px solid $hr_color;
+            padding: 10px 0;
+            .write__comment {
+              background-color: $background_search_input;
+              padding: 10px;
+              border-radius: 20px;
+              width: 80%;
+              form {
+                @extend %alignCenter;
+                input {
+                  width: 100%;
+                  color: #fff;
+                }
+                button i {
+                  color: $nav_color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sidebar-right {
+    display: none;
+    padding: 20px;
+    background-color: $dark_color;
+    height: fit-content;
+    margin: 20px;
+    border-radius: 10px;
+    position: sticky;
+    right: 0;
+    top: 60px;
+    h2 {
+      color: #fff;
+      font-size: 1rem;
+    }
+    .genral-chat {
+      &:hover {
+        background-color: $background_popup;
+        border-radius: 10px;
+      }
+      display: flex;
+      padding: 5px;
+      .icon {
+        padding-top: 10px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+      .info {
+        padding: 10px;
+        h3 {
+          color: #fff;
+          font-size: 0.9rem;
+        }
+        a {
+          padding: 5px 0;
+          color: $nav_color;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .home__container {
+    display: flex;
+    .sidebar-left {
+      display: block;
+    }
+    .home__content {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .home__container {
+    .sidebar-left {
+      width: 40%;
+    }
+    .home__content {
+      header {
+        .search {
+          color: #fff;
+          h1 {
+            font-size: 1.5rem;
+          }
+        }
+        .links {
+          border-bottom: 1px solid $hr_color;
+          padding: 10px 0;
+          a {
+            margin-right: 5px;
+            display: block;
+            color: #fff;
+            font-size: 0.8rem;
+            padding: 8px;
+            border-radius: 20px;
+            background-color: $background_popup;
+          }
+        }
+      }
+      .friends-list {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            margin-right: 20px;
+            .friend {
+              background-color: $dark_color;
+              display: block;
+              width: 200px;
+              border-radius: 10px;
+              .friend__profile {
+                .friend__profile-photo {
+                  margin: 0;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 0;
+                  border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                }
+              }
+              .friend__requset {
+                padding: 10px;
+                .friend__info {
+                  display: block;
+                  color: #fff;
+                }
+                .btns {
+                  margin-top: 10px;
+                  button {
+                    margin: 5px 0;
+                    padding: 8px;
+                    border-radius: 8px;
+                    color: #fff;
+                    width: 100%;
+                  }
+                  .confirm {
+                    background-color: $main_color;
+                  }
+                  .delete {
+                    background-color: $background_popup;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  .home__container {
+    .sidebar-right {
+      display: block;
+      width: 40%;
+    }
+  }
 }

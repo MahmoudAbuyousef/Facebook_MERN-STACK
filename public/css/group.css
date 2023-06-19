@@ -32,19 +32,19 @@ p {
   border-radius: 10px;
 }
 
-.nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
+.home__container .home__content .posts .post-added .post .profile-photo-post .hide__post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.nav__contaienr .nav__search-menu, .nav__contaienr .nav__search-menu .logo-search-container, .nav__contaienr .nav__search-menu .logo-search-container .nav__search-container, .nav__contaienr .nav__search-menu .nav__icon--container, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__social .menu__search, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav .nav__messenger-icons, .nav__contaienr .nav__pages, .nav__contaienr .nav__group-right .nav__icon--container, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav {
+.home__container .home__content .posts .post-added .post .profile-photo-post, .home__container .home__content .posts .post-added .post-interactive .post__btns-interactive, .nav__contaienr .nav__search-menu, .nav__contaienr .nav__search-menu .logo-search-container, .nav__contaienr .nav__search-menu .logo-search-container .nav__search-container, .nav__contaienr .nav__search-menu .nav__icon--container, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__social .menu__search, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav .nav__messenger-icons, .nav__contaienr .nav__pages, .nav__contaienr .nav__group-right .nav__icon--container, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.profile-photo, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
+.home__container .home__content .posts .post-added .post .profile-photo-post .hide__post, .profile-photo, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .top__post .close__create-post, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger--btn, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -69,9 +69,32 @@ p {
   padding-bottom: 10px;
 }
 
-.nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .post__user-info, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__pages .nav__page-notification .nav__page-notification-list ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__social .menu__search, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav .nav__messenger-icons, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification .nav__page-notification-list ul li a {
+.home__container .home__content .posts .post-added .post .profile-photo-post .user__info, .home__container .home__content .posts .post-added .post .insert__commnet, .home__container .home__content .posts .post-added .post .edit__comment, .home__container .home__content .posts .post-added .post .edit__comment .edit__form, .home__container .home__content .posts .post-added .post-interactive .comments, .home__container .home__content .posts .post-added .post-interactive .comments .write__comment form, .nav__contaienr .nav__search-menu .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__create .write__post-popup .create__post .post__user-info, .nav__contaienr .nav__search-menu .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__pages .nav__page-notification .nav__page-notification-list ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__menu .nav__menu-list .menu__container .menu__social .menu__search, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .nav__messenger-list .nav__messenger-nav .nav__messenger-icons, .nav__contaienr .nav__group-right .nav__icon--container .nav__messenger .messenger__members ul li a, .nav__contaienr .nav__group-right .nav__icon--container .nav__page-notification .nav__page-notification-list ul li a {
   display: flex;
   align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.radius {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 button {
@@ -912,6 +935,338 @@ input {
     height: fit-content;
   }
 }
-body {
-  background-color: #18191b;
+.home__container .sidebar-left {
+  margin-right: 20px;
+  display: none;
+  position: sticky;
+  top: 50px;
+  left: 0;
+  background-color: #242527;
+  padding: 10px;
+  height: 100vh;
+  width: 50%;
+}
+.home__container .sidebar-left header {
+  color: #fff;
+}
+.home__container .sidebar-left header i {
+  background-color: #333436;
+}
+.home__container .sidebar-left .links {
+  margin: 10px 0;
+}
+.home__container .sidebar-left .links a {
+  padding: 10px;
+  color: #fff;
+  margin-top: 10px;
+}
+.home__container .sidebar-left .links a i {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: #333436;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home__container .sidebar-left .links a .active {
+  background-color: #1977f1;
+}
+.home__container .sidebar-left .links .active-home {
+  background-color: #333436;
+  border-radius: 10px;
+}
+.home__container .sidebar-left .links .create-group {
+  background-color: #273951;
+  width: 100%;
+  text-align: center;
+  color: #1977f1;
+  display: block;
+}
+.home__container .sidebar-left .group-list {
+  border-top: 1px solid #3f4042;
+}
+.home__container .sidebar-left .group-list h2 {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 1rem;
+}
+.home__container .sidebar-left .group-list .list ul li {
+  padding: 10px 0;
+}
+.home__container .sidebar-left .group-list .list ul li a {
+  color: #fff;
+}
+.home__container .home__content {
+  padding: 10px;
+}
+.home__container .home__content .posts {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+.home__container .home__content .posts .post-added {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #242527;
+  border-radius: 10px;
+}
+.home__container .home__content .posts .post-added .post .profile-photo-post {
+  color: #fff;
+}
+.home__container .home__content .posts .post-added .post .profile-photo-post h2 {
+  font-size: 0.7rem;
+}
+.home__container .home__content .posts .post-added .post .profile-photo-post .hide__post {
+  background-color: #333436;
+  cursor: pointer;
+}
+.home__container .home__content .posts .post-added .post .profile-photo-post .hide__post .post__icon-hidden {
+  color: #a6a7a9;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet {
+  position: relative;
+  margin-top: 10px;
+  color: #fff;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet i {
+  margin-left: 5px;
+  font-size: 0.6rem;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__content {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  word-break: break-all;
+  background-color: #333436;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .options {
+  cursor: pointer;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options {
+  display: none;
+  position: absolute;
+  top: -60px;
+  background-color: #333436;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 40px;
+  border: 10px solid transparent;
+  border-bottom-color: #333436;
+  transform: rotate(-45deg);
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options a {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.home__container .home__content .posts .post-added .post .insert__commnet .comment__options a:hover {
+  border-radius: 5px;
+  background-color: #333436;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form {
+  border-radius: 30px;
+  background-color: #333436;
+  padding: 3px;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form input {
+  color: #fff;
+  background-color: #333436;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form .btns {
+  display: flex;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form .btns button {
+  color: #a6a7a9;
+  margin: 0 5px;
+}
+.home__container .home__content .posts .post-added .post .edit__comment .edit__form .btns .cancle__edit {
+  color: #a6a7a9;
+}
+.home__container .home__content .posts .post-added .content__post-add {
+  padding: 10px;
+  margin-top: 20px;
+  color: #fff;
+}
+.home__container .home__content .posts .post-added .post-interactive .post__result {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #a6a7a9;
+  border-bottom: 1px solid #3f4042;
+}
+.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive {
+  margin-top: 5px;
+}
+.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive button {
+  padding: 10px;
+  border-radius: 10px;
+  color: #a6a7a9;
+}
+.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive .like-hidden {
+  display: none;
+}
+.home__container .home__content .posts .post-added .post-interactive .post__btns-interactive .like.active {
+  color: #1977f1;
+}
+.home__container .home__content .posts .post-added .post-interactive .comments {
+  margin-top: 5px;
+  border-top: 1px solid #3f4042;
+  padding: 10px 0;
+}
+.home__container .home__content .posts .post-added .post-interactive .comments .write__comment {
+  background-color: #3a3b3d;
+  padding: 10px;
+  border-radius: 20px;
+  width: 80%;
+}
+.home__container .home__content .posts .post-added .post-interactive .comments .write__comment form input {
+  width: 100%;
+  color: #fff;
+}
+.home__container .home__content .posts .post-added .post-interactive .comments .write__comment form button i {
+  color: #a6a7a9;
+}
+.home__container .sidebar-right {
+  display: none;
+  padding: 20px;
+  background-color: #242527;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 20px;
+  border-radius: 10px;
+  position: sticky;
+  right: 0;
+  top: 60px;
+}
+.home__container .sidebar-right h2 {
+  color: #fff;
+  font-size: 1rem;
+}
+.home__container .sidebar-right .genral-chat {
+  display: flex;
+  padding: 5px;
+}
+.home__container .sidebar-right .genral-chat:hover {
+  background-color: #333436;
+  border-radius: 10px;
+}
+.home__container .sidebar-right .genral-chat .icon {
+  padding-top: 10px;
+}
+.home__container .sidebar-right .genral-chat .icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.home__container .sidebar-right .genral-chat .info {
+  padding: 10px;
+}
+.home__container .sidebar-right .genral-chat .info h3 {
+  color: #fff;
+  font-size: 0.9rem;
+}
+.home__container .sidebar-right .genral-chat .info a {
+  padding: 5px 0;
+  color: #a6a7a9;
+  display: block;
+}
+
+@media (min-width: 576px) {
+  .home__container {
+    display: flex;
+  }
+  .home__container .sidebar-left {
+    display: block;
+  }
+  .home__container .home__content {
+    width: 80%;
+  }
+}
+@media (min-width: 767px) {
+  .home__container .sidebar-left {
+    width: 40%;
+  }
+  .home__container .home__content header .search {
+    color: #fff;
+  }
+  .home__container .home__content header .search h1 {
+    font-size: 1.5rem;
+  }
+  .home__container .home__content header .links {
+    border-bottom: 1px solid #3f4042;
+    padding: 10px 0;
+  }
+  .home__container .home__content header .links a {
+    margin-right: 5px;
+    display: block;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #333436;
+  }
+  .home__container .home__content .friends-list ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .home__container .home__content .friends-list ul li {
+    margin-right: 20px;
+  }
+  .home__container .home__content .friends-list ul li .friend {
+    background-color: #242527;
+    display: block;
+    width: 200px;
+    border-radius: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__profile .friend__profile-photo {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset {
+    padding: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .friend__info {
+    display: block;
+    color: #fff;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns {
+    margin-top: 10px;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns button {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns .confirm {
+    background-color: #1977f1;
+  }
+  .home__container .home__content .friends-list ul li .friend .friend__requset .btns .delete {
+    background-color: #333436;
+  }
+}
+@media (min-width: 991px) {
+  .home__container .sidebar-right {
+    display: block;
+    width: 40%;
+  }
 }

@@ -20,3 +20,22 @@ let commentOption = document.getElementById("comment-option");
 showCommentsOptions.onclick = () => {
   commentOption.style.display = "block";
 };
+
+let likeIconShow = document.getElementById("like-icon-show");
+let likeIconHidden = document.getElementById("like-icon-hidden");
+let likeBtn = document.getElementById("like");
+
+if (likeIconShow) {
+  likeIconShow.addEventListener("click", () => {
+    likeBtn.classList.add("active");
+    likeIconHidden.style.display = "inline";
+    likeIconShow.style.display = "none";
+  });
+}
+if (likeIconHidden) {
+  likeIconHidden.addEventListener("click", () => {
+    likeBtn.classList.remove("active");
+    likeIconShow.style.display = "inline";
+    likeIconHidden.style.display = "none";
+  });
+}
