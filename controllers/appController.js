@@ -23,7 +23,6 @@ module.exports = {
         res.redirect("home.ejs");
         console.log(loginUser);
       }
-
       !loginUser && res.json({ message: "user already exists!" });
       const isPasswordValid = await bcrypt.compare(password, loginUser.password);
 
