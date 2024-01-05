@@ -2,7 +2,7 @@ repo_name: MahmoudAbuyousef/Facebook_mern
 report_id: e7ceb3d7509419183cf222ade40bac41
 version: 0.1
 repo_type: Public
-timestamp: '2023-12-19T17:17:59+00:00'
+timestamp: '2024-01-05T08:20:06+00:00'
 requested_by: MahmoudAbuyousef
 provider: github
 branch: main
@@ -16,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern
   detection_source: Repo Metadata
 - name: EJS
   description: An Embedded JavaScript templating Language
@@ -26,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Templating Languages & Extensions
   image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern/blob/main/package.json
   detection_source: package.json
   last_updated_by: mahmoud abuyoussef
   last_updated_on: 2023-06-12 19:22:21.000000000 Z
@@ -38,6 +40,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern
   detection_source: Repo Metadata
 - name: ExpressJS
   description: Sinatra inspired web development framework for node.js -- insanely
@@ -76,6 +79,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern
   detection_source: Repo Metadata
 - name: npm
   description: The package manager for JavaScript.
@@ -85,6 +89,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern/blob/main/package.json
   detection_source: package.json
   last_updated_by: mahmoud abuyoussef
   last_updated_on: 2023-06-12 19:22:21.000000000 Z
