@@ -7,6 +7,7 @@ MahmoudAbuyousef/Facebook_mern is built on the following main stack:
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
 - [EJS](https://ejs.co/) – Templating Languages & Extensions
+- [nodemon](http://nodemon.io/) – node.js Application Monitoring
 
 Full tech stack [here](/techstack.md)
 
@@ -20,6 +21,7 @@ MahmoudAbuyousef/Facebook_mern is built on the following main stack:
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg' alt='Mongoose'/> [Mongoose](http://mongoosejs.com/) – Object Document Mapper (ODM)
 - <img width='25' height='25' src='https://img.stackshare.io/no-img-open-source.png' alt='EJS'/> [EJS](https://ejs.co/) – Templating Languages & Extensions
+- <img width='25' height='25' src='https://img.stackshare.io/service/5577/preview.png' alt='nodemon'/> [nodemon](http://nodemon.io/) – node.js Application Monitoring
 
 Full tech stack [here](/techstack.md)
 
@@ -30,7 +32,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [MahmoudAbuyousef/Facebook_mern](https://github.com/MahmoudAbuyousef/Facebook_mern)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|13<br/>Tools used|01/05/24 <br/>Report generated|
+|14<br/>Tools used|01/19/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -89,7 +91,7 @@ Full tech stack [here](/techstack.md)
 </tr>
 </table>
 
-## <img src='https://img.stackshare.io/devops.svg'/> DevOps (2)
+## <img src='https://img.stackshare.io/devops.svg'/> DevOps (3)
 <table><tr>
   <td align='center'>
   <img width='36' height='36' src='https://img.stackshare.io/service/1046/git.png' alt='Git'>
@@ -97,6 +99,14 @@ Full tech stack [here](/techstack.md)
   <sub><a href="http://git-scm.com/">Git</a></sub>
   <br>
   <sub></sub>
+</td>
+
+<td align='center'>
+  <img width='36' height='36' src='https://img.stackshare.io/service/5577/preview.png' alt='nodemon'>
+  <br>
+  <sub><a href="http://nodemon.io/">nodemon</a></sub>
+  <br>
+  <sub>v3.0.2</sub>
 </td>
 
 <td align='center'>
