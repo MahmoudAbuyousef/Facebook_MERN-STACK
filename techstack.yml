@@ -1,12 +1,12 @@
 repo_name: MahmoudAbuyousef/Facebook_mern
-report_id: e7ceb3d7509419183cf222ade40bac41
+report_id: 5fbf99bbf0b1756d7c51730f5be14892
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:20:06+00:00'
+timestamp: '2024-01-19T13:08:33+00:00'
 requested_by: MahmoudAbuyousef
 provider: github
 branch: main
-detected_tools_count: 13
+detected_tools_count: 14
 tools:
 - name: CSS 3
   description: The latest evolution of the Cascading Style Sheets language
@@ -69,8 +69,8 @@ tools:
   image_url: https://img.stackshare.io/service/1231/0TXzZU7W_400x400.jpg
   detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern/blob/main/package-lock.json
   detection_source: package.json
-  last_updated_by: mahmoud abuyoussef
-  last_updated_on: 2023-06-12 19:22:21.000000000 Z
+  last_updated_by: Mahmoud Abu Youssef
+  last_updated_on: 2023-12-19 17:36:58.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
@@ -81,6 +81,20 @@ tools:
   image_url: https://img.stackshare.io/service/1046/git.png
   detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern
   detection_source: Repo Metadata
+- name: nodemon
+  description: A simple monitor script for use during development of a node.js app
+  website_url: http://nodemon.io/
+  version: 3.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Monitoring
+  sub_category: node.js Application Monitoring
+  image_url: https://img.stackshare.io/service/5577/preview.png
+  detection_source_url: https://github.com/MahmoudAbuyousef/Facebook_mern/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Mahmoud Abu Youssef
+  last_updated_on: 2023-12-19 17:36:58.000000000 Z
 - name: npm
   description: The package manager for JavaScript.
   website_url: https://www.npmjs.com/
